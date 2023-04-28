@@ -21,3 +21,11 @@ fmt: ## format go files
 PHONY: lint
 lint: ## lint go files
 	golangci-lint run -c .golang-ci.yml
+
+PHONY: build
+build: ## build output
+	go build -v -o viddy
+
+PHONY: install
+install: ## Install compiled executable
+	go install
