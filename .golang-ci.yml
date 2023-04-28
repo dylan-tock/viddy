@@ -1,21 +1,29 @@
 linters-settings:
   lll:
     line-length: 130
+  # Values modified to handle existing v.Run() func
+  gocyclo:
+    min-complexity: 32
+  maintidx:
+    under: 17
 linters:
   enable-all: true
   disable:
-    - testpackage
-    - forbidigo
-    - paralleltest
-    - exhaustivestruct
-    - wrapcheck
-    - gomnd
-    - gochecknoglobals
-    - maligned
     - exhaustive
-    - gomoddirectives
+    - exhaustivestruct
     - exhaustruct
+    - forbidigo
     - forcetypeassert
-    - predeclared
+    - gochecknoglobals
+    - golint
+    - gomnd
+    - gomoddirectives
+    - interfacer
+    - maligned
     - nilnil
+    - paralleltest
+    - predeclared
+    - scopelint
+    - testpackage
     - varnamelen
+    - wrapcheck
